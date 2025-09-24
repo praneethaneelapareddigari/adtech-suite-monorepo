@@ -7,7 +7,7 @@ Production-style ad‑tech stack you can run locally or deploy to AWS ECS/Lambda
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ![Architecture](screenshots/architecture.png)
 
@@ -21,7 +21,7 @@ All three services expose `/health`, OpenAPI (`/docs`), and are containerized.
 
 ---
 
-## 📦 Monorepo layout
+##  Monorepo layout
 
 ```
 adtech-suite-monorepo/
@@ -70,7 +70,7 @@ adtech-suite-monorepo/
 
 ---
 
-## ▶️ Quickstart (Local)
+##  Quickstart (Local)
 
 **Prereqs:** Docker Desktop, `docker-compose`
 
@@ -93,7 +93,7 @@ adtech-suite-monorepo/
 
 ---
 
-## 🧪 Smoke tests
+##  Smoke tests
 
 ```bash
 # AdPulse — ingest an event
@@ -123,7 +123,7 @@ curl -X POST http://localhost:8003/score -H "content-type: application/json" -d 
 
 ---
 
-## 🚀 Deploy (AWS ECS Fargate, RDS, MSK)
+##  Deploy (AWS ECS Fargate, RDS, MSK)
 
 See **infra/terraform** for a working skeleton: VPC, subnets, security groups, RDS Postgres, ElastiCache Redis, MSK (Kafka), and three ECS Services. Replace placeholders in `terraform.tfvars` and run:
 
@@ -138,7 +138,7 @@ For serverless endpoints via Lambda + API Gateway, package each service with a L
 
 ---
 
-## 📊 Observability
+##  Observability
 
 - Structured JSON logs (`uvicorn`, app logs)
 - Basic Prometheus-style counters (requests, cache hits) exposed at `/metrics` (skeleton)
@@ -146,7 +146,7 @@ For serverless endpoints via Lambda + API Gateway, package each service with a L
 
 ---
 
-## ✅ CI/CD
+##  CI/CD
 
 - GitHub Actions: lint, test, build images on PRs and `main`.  
 - Example tags: `ghcr.io/<user>/adtech/adpulse:{{ github.sha }}`
@@ -155,7 +155,7 @@ See `.github/workflows/ci.yml`.
 
 ---
 
-## 🔐 Security Notes
+##  Security Notes
 
 - Runtime secrets come from env/SSM; **do not** commit `.env` files.
 - Minimal dependencies; pin versions in `requirements.txt`.
@@ -163,7 +163,7 @@ See `.github/workflows/ci.yml`.
 
 ---
 
-## 📷 Screenshots
+##  Screenshots
 
 - `screenshots/architecture.png` — System diagram
 - `screenshots/adpulse-report.png` — Sample events chart
@@ -177,7 +177,7 @@ See `.github/workflows/ci.yml`.
 ## License
 
 MIT (for demo/portfolio use).
-## 📸 Gallery (embedded)
+##  Gallery (embedded)
 
 ![System architecture](./screenshots/architecture.png)
 
