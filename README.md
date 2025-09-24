@@ -177,3 +177,16 @@ See `.github/workflows/ci.yml`.
 ## License
 
 MIT (for demo/portfolio use).
+## 📸 Gallery (embedded)
+
+![System architecture](./screenshots/architecture.png)
+
+![AdPulse++ sample events chart](./screenshots/adpulse-report.png)
+
+![GeoReach++ geo hit result](./screenshots/georeach-hit.png)
+
+![AdShield++ fraud score result](./screenshots/adshield-score.png)
+
+![OpenAPI docs composite](./screenshots/openapi.png)
+
+![CI pipeline schematic](./screenshots/ci-pipeline.png)
